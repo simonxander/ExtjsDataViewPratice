@@ -14,8 +14,22 @@ Ext.define('MyDataView.MyPanel', {
 			]
 		})
 
+		var dataViewConfig = {
+			xtype: 'dataview',
+			store: this.store,
+			itemSelector: 'li',
+			tpl: new Ext.XTemplate(
+				'<ul>',
+				'<tpl for=".">',
+					'<li> {name} {age} {from}</li>',
+				'</tpl>',
+				'<ul>'
+			)
+		};
+
+		config.items = dataViewConfig;
+
 		// Must callParent when override constructor
 		this.callParent(arguments);
-	},
-	html: 'Panel Body'
+	}
 });
