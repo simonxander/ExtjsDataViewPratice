@@ -1,3 +1,6 @@
+Ext.Loader.setPath('MyDataView', 'js');
+Ext.require('MyDataView.MyPanel');
+
 Ext.onReady(function() {
 	Ext.application({
 		name   : 'MyDataViewApp',
@@ -6,10 +9,7 @@ Ext.onReady(function() {
 				renderTo : Ext.getBody(),
 				layout:'fit',
 				items : [
-					Ext.create('Ext.panel.Panel',{
-						title: 'Panel Title',
-						html: 'Panel Body'
-					})
+					Ext.create('MyDataView.MyPanel')
 				]
 			});
 		}
