@@ -9,7 +9,7 @@ Ext.onReady(function() {
 				renderTo : Ext.getBody(),
 				layout:'fit',
 				items : [
-					Ext.create('MyDataView.MyPanel')
+					Ext.create('MyDataView.MyPanel', {})
 				]
 			});
 		}
