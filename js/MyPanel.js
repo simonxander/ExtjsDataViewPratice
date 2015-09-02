@@ -10,6 +10,7 @@ Ext.define('MyDataView.MyPanel', {
 			],
 			data: [
 				{name: 'Simon', age: '18', from: '1997/5/8'},
+				{name: 'Simon2', age: '20', from: '2015/9/2'},
 				{name: 'David', age: '17', from: '1980/3/3'}
 			]
 		})
@@ -17,13 +18,11 @@ Ext.define('MyDataView.MyPanel', {
 		var dataViewConfig = {
 			xtype: 'dataview',
 			store: this.store,
-			itemSelector: 'li',
+			itemSelector: 'div.item',
 			tpl: new Ext.XTemplate(
-				'<ul>',
 				'<tpl for=".">',
-					'<li> {name} {age} {from}</li>',
-				'</tpl>',
-				'<ul>'
+					'<div class="item" style="border: solid; border-width: 2px; margin: 2px; padding: 5px; float: left; width: 48%"> <b>{name}</b>Age: {age} <br>{from}</div>',
+				'</tpl>'
 			)
 		};
 
