@@ -18,10 +18,11 @@ Ext.define('MyDataView.MyPanel', {
 		var dataViewConfig = {
 			xtype: 'dataview',
 			store: this.store,
+			cls: 'myDataviewCls',
 			itemSelector: 'div.item',
 			tpl: new Ext.XTemplate(
 				'<tpl for=".">',
-					'<div class="item" style="border: solid; border-width: 2px; margin: 2px; padding: 5px; float: left; width: 48%"> <b>{name}</b>Age: {age} <br>{from}</div>',
+					'<div class="item"> <b>{name}</b>Age: {age} <br>{from}</div>',
 				'</tpl>'
 			)
 		};
